@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/.well-known/stellar.toml",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    }
+  ],
+  "builds": [
+    {
+      "src": "src/server.js",
+      "use": "@vercel/node"
+    }
+  ]
+} 

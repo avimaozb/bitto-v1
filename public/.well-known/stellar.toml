@@ -1,0 +1,78 @@
+# Version of SEP this stellar.toml adheres to
+VERSION="2.0.0"
+
+# The endpoint for clients to query status of a deposit/withdrawal
+TRANSFER_SERVER_SEP24="https://bitto.vercel.app/api/sep24"
+
+# The signing key is used to sign transactions
+SIGNING_KEY="GBDBSYYDEEQF6LRKYOT4GGH5FJ6TBOWKXQHXWRQQYIU6K6PWJQJPCLLZ"
+
+# The endpoint used for SEP-10 authentication
+WEB_AUTH_ENDPOINT="https://bitto.vercel.app/api/auth"
+
+# The endpoint used for SEP-12 KYC
+KYC_SERVER="https://bitto.vercel.app/api/kyc"
+
+# The endpoint used for SEP-38 quotes
+QUOTE_SERVER="https://yourdomain.com/api/quotes"
+
+# The network passphrase
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+
+# The domain hosting this stellar.toml file
+DOMAIN="bitto.vercel.app"
+
+# Documentation about your service
+DOCUMENTATION_ORG_NAME="Bitto"
+DOCUMENTATION_ORG_URL="https://bitto.vercel.app"
+DOCUMENTATION_ORG_DESCRIPTION="Bitto - MoneyGram Stellar Integration"
+DOCUMENTATION_ORG_PHYSICAL_ADDRESS="Your physical address"
+DOCUMENTATION_ORG_PHONE_NUMBER="Your phone number"
+DOCUMENTATION_ORG_LOGO="https://bitto.vercel.app/logo.png"
+
+# Currencies supported
+[[CURRENCIES]]
+code="USD"
+issuer="YOUR_USD_ISSUER"
+status="live"
+transfer_server="https://bitto.vercel.app/api/sep24"
+is_asset_anchored=true
+anchor_asset_type="fiat"
+anchor_asset="USD"
+show_in_deposit=true
+show_in_withdraw=true
+deposit_min_amount="10"
+deposit_max_amount="10000"
+withdraw_min_amount="10"
+withdraw_max_amount="10000"
+
+[[CURRENCIES]]
+code="USDC"
+issuer="YOUR_USDC_ISSUER"
+status="live"
+transfer_server="https://bitto.vercel.app/api/sep24"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="USDC"
+show_in_deposit=true
+show_in_withdraw=true
+deposit_min_amount="10"
+deposit_max_amount="10000"
+withdraw_min_amount="10"
+withdraw_max_amount="10000"
+
+# MoneyGram specific settings
+[[CURRENCIES]]
+code="MONEYGRAM"
+issuer="YOUR_MONEYGRAM_ISSUER"
+status="live"
+transfer_server="https://yourdomain.com/api/sep24"
+is_asset_anchored=true
+anchor_asset_type="fiat"
+anchor_asset="USD"
+show_in_deposit=true
+show_in_withdraw=true
+deposit_min_amount="10"
+deposit_max_amount="10000"
+withdraw_min_amount="10"
+withdraw_max_amount="10000" 

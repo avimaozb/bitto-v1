@@ -1,16 +1,19 @@
 {
-  "name": "sep6-demo-client",
+  "name": "bitto-v1",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack && cp index.html dist/ && cp -r pages dist/"
+    "start": "node src/server.js",
+    "build": "webpack && cp index.html dist/ && cp -r pages dist/",
+    "dev": "nodemon src/server.js",
+    "vercel-build": "webpack && cp index.html dist/ && cp -r pages dist/"
   },
   "devDependencies": {
     "css-loader": "^3.6.0",
     "file-loader": "^4.3.0",
     "husky": "^3.1.0",
+    "nodemon": "^2.0.22",
     "prettier": "^1.19.1",
     "pretty-quick": "^1.11.1",
     "style-loader": "^0.23.1",
@@ -22,11 +25,16 @@
   },
   "dependencies": {
     "@stellar/prettier-config": "^1.0.1",
+    "axios": "^1.6.2",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.8.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "jsonschema": "^1.4.0",
     "lodash.get": "^4.4.2",
     "node-sass": "^4.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "renderjson": "^1.4.0",
     "sass-loader": "^7.3.1",
     "stellar-sdk": "^8.0.0",

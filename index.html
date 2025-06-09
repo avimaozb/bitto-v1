@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Connector Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyGram Stellar Integration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f5f5f5;
+      }
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+    </style>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -37,64 +55,7 @@
     />
   </head>
   <body>
-    <div class="layout-wrapper">
-      <div class="deprecation-warning">
-        <div class="deprecation-warning-line">
-          <a href="https://sep24.stellar.org">sep24.stellar.org</a> is no longer
-          actively maintained.
-        </div>
-        <div class="deprecation-warning-line">
-          <a href="https://demo-wallet.stellar.org">demo-wallet.stellar.org</a>
-          is being developed to replace this client.
-        </div>
-      </div>
-
-      <div id="instructions-section" class="instructions-section">
-        <div id="instructions-container" class="instructions-container"></div>
-      </div>
-
-      <div id="device">
-        <div id="frame">
-          <div id="frame-content">
-            <iframe width="300" height="650" id="device-frame"></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div id="action-bar" class="action-bar">
-        <button id="action-button" class="button">Continue</button>
-        <div id="action-text"></div>
-        <button
-          id="download-logs-button"
-          class="button button--small button--outline button--margin-right"
-        >
-          <i class="icon icon--arrow-down"></i>Download Logs
-        </button>
-        <button id="config-button" class="button button--small button--outline">
-          <i class="icon icon--gear"></i>Config
-        </button>
-      </div>
-    </div>
-
-    <div id="config-panel" class="modal">
-      <div class="modal__window">
-        <div id="close-button" class="modal__close">
-          <i class="icon icon--close"></i>
-        </div>
-        <h2 class="modal__title">Config</h2>
-        <div class="modal__body">
-          <form id="config-form"></form>
-        </div>
-        <div class="modal__footer">
-          <div id="cancel-config" class="button button--ghost">Cancel</div>
-          <div id="apply-config" class="button">Apply Changes</div>
-        </div>
-      </div>
-    </div>
-    <div id="pubnet-disclaimer">
-      WARNING: THIS IS A TECHNICAL DEMO. IF YOU DON'T KNOW WHAT YOU'RE DOING
-      LEAVE IMMEDIATELY. SCAMMERS CAN USE IT TO ACCESS YOUR FUNDS.
-    </div>
-    <script src="main.js"></script>
+    <div id="root"></div>
+    <script src="/dist/bundle.js"></script>
   </body>
 </html>

@@ -1,5 +1,8 @@
 import "./style.scss";
 import * as uiActions from "./ui/ui-actions";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MoneyGramIntegration from './components/MoneyGramIntegration';
 
 const Config = require("./config");
 const StellarSdk = require("stellar-sdk");
@@ -153,3 +156,10 @@ const next = async () => {
 };
 
 uiActions.onNext(next);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <MoneyGramIntegration />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

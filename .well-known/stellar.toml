@@ -1,0 +1,39 @@
+VERSION="2.0.0"
+
+# MoneyGram Integration Settings
+SIGNING_KEY="YOUR_STELLAR_PUBLIC_KEY"
+NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
+
+# Wallet Information
+WALLET_NAME="Your Wallet Name"
+WALLET_DOMAIN="yourdomain.com"
+WALLET_EMAIL="contact@yourdomain.com"
+
+# SEP-24 Settings
+TRANSFER_SERVER_SEP24="https://yourdomain.com/api/sep24"
+WEB_AUTH_ENDPOINT="https://yourdomain.com/api/auth"
+KYC_SERVER="https://yourdomain.com/api/kyc"
+
+# Supported Assets
+[[CURRENCIES]]
+code="USD"
+issuer="YOUR_ASSET_ISSUER"
+status="live"
+transfer_server="https://yourdomain.com/api/sep24"
+is_asset_anchored=true
+anchor_asset_type="fiat"
+anchor_asset="USD"
+show_in_deposit=true
+show_in_withdraw=true
+
+# MoneyGram Specific Settings
+[[CURRENCIES]]
+code="USDC"
+issuer="YOUR_USDC_ISSUER"
+status="live"
+transfer_server="https://yourdomain.com/api/sep24"
+is_asset_anchored=true
+anchor_asset_type="crypto"
+anchor_asset="USDC"
+show_in_deposit=true
+show_in_withdraw=true 
